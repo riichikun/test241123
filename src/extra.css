@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+.burger {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .burger span {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 9px;
+    transition: all 0.25s ease 0s;
+  }
+  .burger:after, .burger:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+  }
+  .burger:after {
+    bottom: 1px;
+    transition: all 0.25s;
+  }
+  .burger:before {
+    top: 1px;
+    transition: all 0.25s;
+  }
+  .burger:after, .burger:before, .burger span {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.50);
+    margin-left: 0.15px;
+  }
+
+  nav a:hover {
+    opacity: 0.5;
+  }
+
+  .cross {
+    cursor: pointer;
+  }
+
+
+  /* hover button effect */
+
+
+  .button {
+    transition: all .35s;
+  }
+  .button span{
+    position: relative;
+    z-index: 8;
+  }
+  .button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all .35s;
+    z-index: -2;
+  }
+
+  #Button_1::after {
+    background: #07315d;
+  }
+  #Button_2::after, #Button_3::after {
+    background: #ffffff;
+  }
+
+  #Button_1:hover {
+    color: #ffffff;
+  }
+  #Button_1:hover div:last-of-type {
+    background-color: #ffffff00;
+  }
+
+  #Button_2:hover, #Button_3:hover {
+    color: #07315d;
+  }
+
+  
+  .button:hover:after{
+    width: 100%;
+  }
+
